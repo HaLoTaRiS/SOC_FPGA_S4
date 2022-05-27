@@ -1,0 +1,10 @@
+vhdl xil_defaultlib  \
+"../../../bd/zybo_7/ip/zybo_7_processing_system7_0_0/zybo_7_processing_system7_0_0_sim_netlist.vhdl" \
+"../../../bd/zybo_7/ipshared/2ed5/hdl/macc_ip_v1_0_S00_AXI.vhd" \
+"../../../bd/zybo_7/ipshared/2ed5/hdl/macc_ip_v1_0.vhd" \
+"../../../bd/zybo_7/ip/zybo_7_macc_ip_0_0/sim/zybo_7_macc_ip_0_0.vhd" \
+"../../../bd/zybo_7/ip/zybo_7_rst_ps7_0_50M_0/sim/zybo_7_rst_ps7_0_50M_0.vhd" \
+"../../../bd/zybo_7/ip/zybo_7_auto_pc_0/zybo_7_auto_pc_0_sim_netlist.vhdl" \
+"../../../bd/zybo_7/sim/zybo_7.vhd" \
+
+nosort
