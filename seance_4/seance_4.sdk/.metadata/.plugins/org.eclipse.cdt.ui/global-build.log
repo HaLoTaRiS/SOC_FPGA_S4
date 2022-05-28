@@ -1,9 +1,4 @@
-17:54:26 **** Incremental Build of configuration Debug for project seance_4 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-17:54:30 **** Incremental Build of configuration Debug for project seance_4 ****
+18:08:11 **** Incremental Build of configuration Debug for project seance_4 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

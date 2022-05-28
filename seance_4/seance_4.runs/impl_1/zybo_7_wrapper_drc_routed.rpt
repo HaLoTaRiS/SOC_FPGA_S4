@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri May 27 12:23:11 2022
+| Date         : Sat May 28 17:42:16 2022
 | Host         : Titania running 64-bit major release  (build 9200)
 | Command      : report_drc -file zybo_7_wrapper_drc_routed.rpt -pb zybo_7_wrapper_drc_routed.pb -rpx zybo_7_wrapper_drc_routed.rpx
 | Design       : zybo_7_wrapper
@@ -35,7 +35,7 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net zybo_7_i/macc_ip_0/U0/macc_ip_v1_0_S00_AXI_inst/reg_data_out_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin zybo_7_i/macc_ip_0/U0/macc_ip_v1_0_S00_AXI_inst/reg_data_out_reg[7]_i_2/O, cell zybo_7_i/macc_ip_0/U0/macc_ip_v1_0_S00_AXI_inst/reg_data_out_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net zybo_7_i/macc_ip_0/U0/macc_ip_v1_0_S00_AXI_inst/reg_data_out_reg[31]_i_2_n_1 is a gated clock net sourced by a combinational pin zybo_7_i/macc_ip_0/U0/macc_ip_v1_0_S00_AXI_inst/reg_data_out_reg[31]_i_2/O, cell zybo_7_i/macc_ip_0/U0/macc_ip_v1_0_S00_AXI_inst/reg_data_out_reg[31]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

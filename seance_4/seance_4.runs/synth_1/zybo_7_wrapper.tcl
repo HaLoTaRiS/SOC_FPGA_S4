@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -40,6 +41,9 @@ set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Docu
 set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_rst_ps7_0_50M_0/zybo_7_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_rst_ps7_0_50M_0/zybo_7_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_rst_ps7_0_50M_0/zybo_7_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_xbar_0/zybo_7_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_axi_timer_0_0/zybo_7_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_axi_timer_0_0/zybo_7_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_auto_pc_0/zybo_7_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/zybo_7_ooc.xdc]
 

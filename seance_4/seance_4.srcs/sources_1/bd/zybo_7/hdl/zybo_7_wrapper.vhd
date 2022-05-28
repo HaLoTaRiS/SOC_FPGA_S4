@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Fri May 27 12:18:45 2022
+--Date        : Sat May 28 17:35:15 2022
 --Host        : Titania running 64-bit major release  (build 9200)
 --Command     : generate_target zybo_7_wrapper.bd
 --Design      : zybo_7_wrapper

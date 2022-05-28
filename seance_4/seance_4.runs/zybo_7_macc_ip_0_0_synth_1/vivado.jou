@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri May 27 12:19:37 2022
-# Process ID: 6232
+# Start of session at: Sat May 28 17:32:57 2022
+# Process ID: 20528
 # Current directory: C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.runs/zybo_7_macc_ip_0_0_synth_1
 # Command line: vivado.exe -log zybo_7_macc_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zybo_7_macc_ip_0_0.tcl
 # Log file: C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.runs/zybo_7_macc_ip_0_0_synth_1/zybo_7_macc_ip_0_0.vds

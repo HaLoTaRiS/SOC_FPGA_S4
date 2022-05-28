@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1653646773">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1653752150">
   <File Type="PA-TCL" Name="zybo_7_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="zybo_7_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="zybo_7_wrapper_reports.tcl"/>
@@ -46,7 +46,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="zybo_7_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zybo_7_macc_ip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zybo_7_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zybo_7_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zybo_7_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zybo_7_xbar_0"/>
 </GenRun>

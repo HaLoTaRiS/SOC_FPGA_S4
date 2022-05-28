@@ -275,6 +275,16 @@
 
 /******************************************************************/
 
+/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_MACC_IP_0_OUT_INTERRUPT_INTR 61U
+
+/******************************************************************/
+
+/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_MACC_IP_0_VEC_ID XPAR_FABRIC_MACC_IP_0_OUT_INTERRUPT_INTR
+
+/******************************************************************/
+
 /* Definitions for driver SCUGIC */
 #define XPAR_XSCUGIC_NUM_INSTANCES 1U
 
@@ -364,6 +374,26 @@
 #define XPAR_XSDPS_0_HAS_EMIO 0
 #define XPAR_XSDPS_0_IS_CACHE_COHERENT 0
 
+
+/******************************************************************/
+
+/* Definitions for driver TMRCTR */
+#define XPAR_XTMRCTR_NUM_INSTANCES 1U
+
+/* Definitions for peripheral AXI_TIMER_0 */
+#define XPAR_AXI_TIMER_0_DEVICE_ID 0U
+#define XPAR_AXI_TIMER_0_BASEADDR 0x42800000U
+#define XPAR_AXI_TIMER_0_HIGHADDR 0x4280FFFFU
+#define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 200000000U
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral AXI_TIMER_0 */
+#define XPAR_TMRCTR_0_DEVICE_ID 0U
+#define XPAR_TMRCTR_0_BASEADDR 0x42800000U
+#define XPAR_TMRCTR_0_HIGHADDR 0x4280FFFFU
+#define XPAR_TMRCTR_0_CLOCK_FREQ_HZ XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ
 
 /******************************************************************/
 

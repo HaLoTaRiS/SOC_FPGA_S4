@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Thu May 26 18:20:47 2022
+-- Date        : Sat May 28 17:38:45 2022
 -- Host        : Titania running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top zybo_7_auto_pc_0 -prefix
---               zybo_7_auto_pc_0_ zybo_7_auto_pc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_auto_pc_0/zybo_7_auto_pc_0_sim_netlist.vhdl
 -- Design      : zybo_7_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -43,6 +43,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_incr_cmd is
     \axlen_cnt_reg[4]_0\ : in STD_LOGIC;
     \axlen_cnt_reg[8]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_19_b2s_incr_cmd";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_incr_cmd;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_incr_cmd is
@@ -110,18 +112,6 @@ architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_in
   signal \^sel_first_reg_1\ : STD_LOGIC;
   signal \NLW_axaddr_incr_reg[11]_i_4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \axaddr_incr[0]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \axaddr_incr[10]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \axaddr_incr[11]_i_2\ : label is "soft_lutpair122";
-  attribute SOFT_HLUTNM of \axaddr_incr[1]_i_1\ : label is "soft_lutpair124";
-  attribute SOFT_HLUTNM of \axaddr_incr[2]_i_1\ : label is "soft_lutpair125";
-  attribute SOFT_HLUTNM of \axaddr_incr[3]_i_1\ : label is "soft_lutpair126";
-  attribute SOFT_HLUTNM of \axaddr_incr[4]_i_1\ : label is "soft_lutpair121";
-  attribute SOFT_HLUTNM of \axaddr_incr[5]_i_1\ : label is "soft_lutpair125";
-  attribute SOFT_HLUTNM of \axaddr_incr[6]_i_1\ : label is "soft_lutpair122";
-  attribute SOFT_HLUTNM of \axaddr_incr[7]_i_1\ : label is "soft_lutpair126";
-  attribute SOFT_HLUTNM of \axaddr_incr[8]_i_1\ : label is "soft_lutpair124";
-  attribute SOFT_HLUTNM of \axaddr_incr[9]_i_1\ : label is "soft_lutpair121";
   attribute SOFT_HLUTNM of \axlen_cnt[1]_i_1__0\ : label is "soft_lutpair118";
   attribute SOFT_HLUTNM of \axlen_cnt[6]_i_1\ : label is "soft_lutpair120";
   attribute SOFT_HLUTNM of \axlen_cnt[7]_i_1\ : label is "soft_lutpair120";
@@ -1943,6 +1933,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_rd_cmd_fsm is
     r_full : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_19_b2s_rd_cmd_fsm";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_rd_cmd_fsm;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_rd_cmd_fsm is
@@ -2355,6 +2347,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo is
     \in\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_19_b2s_simple_fifo";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo is
@@ -2370,14 +2364,14 @@ architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_si
   signal \memory_reg[3][2]_srl4_n_0\ : STD_LOGIC;
   signal \memory_reg[3][3]_srl4_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair129";
-  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair129";
+  attribute SOFT_HLUTNM of bvalid_i_i_2 : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair123";
+  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair123";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \memory_reg[3][0]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3] ";
   attribute srl_name : string;
   attribute srl_name of \memory_reg[3][0]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][0]_srl4 ";
-  attribute SOFT_HLUTNM of \memory_reg[3][0]_srl4_i_2\ : label is "soft_lutpair128";
-  attribute SOFT_HLUTNM of \memory_reg[3][0]_srl4_i_2__0\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \memory_reg[3][0]_srl4_i_2__0\ : label is "soft_lutpair122";
   attribute srl_bus_name of \memory_reg[3][10]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3] ";
   attribute srl_name of \memory_reg[3][10]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][10]_srl4 ";
   attribute srl_bus_name of \memory_reg[3][11]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3] ";
@@ -2784,16 +2778,16 @@ architecture STRUCTURE of \zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_s
   signal \cnt_read[0]_i_1_n_0\ : STD_LOGIC;
   signal \cnt_read[1]_i_1_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair130";
-  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair130";
-  attribute SOFT_HLUTNM of m_axi_bready_INST_0 : label is "soft_lutpair131";
+  attribute SOFT_HLUTNM of \cnt_read[0]_i_1\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of \cnt_read[1]_i_1\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of m_axi_bready_INST_0 : label is "soft_lutpair125";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \memory_reg[3][0]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3] ";
   attribute srl_name : string;
   attribute srl_name of \memory_reg[3][0]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][0]_srl4 ";
   attribute srl_bus_name of \memory_reg[3][1]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3] ";
   attribute srl_name of \memory_reg[3][1]_srl4\ : label is "inst/\gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][1]_srl4 ";
-  attribute SOFT_HLUTNM of mhandshake_r_i_1 : label is "soft_lutpair131";
+  attribute SOFT_HLUTNM of mhandshake_r_i_1 : label is "soft_lutpair125";
 begin
 bvalid_i_i_3: unisim.vcomponents.LUT2
     generic map(
@@ -4085,6 +4079,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wr_cmd_fsm is
     cnt_read : in STD_LOGIC_VECTOR ( 1 downto 0 );
     aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_19_b2s_wr_cmd_fsm";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wr_cmd_fsm;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wr_cmd_fsm is
@@ -4096,9 +4092,9 @@ architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wr
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \axlen_cnt[3]_i_1\ : label is "soft_lutpair116";
   attribute SOFT_HLUTNM of \axlen_cnt[8]_i_1__0\ : label is "soft_lutpair116";
-  attribute SOFT_HLUTNM of m_axi_awvalid_INST_0 : label is "soft_lutpair117";
+  attribute SOFT_HLUTNM of m_axi_awvalid_INST_0 : label is "soft_lutpair115";
+  attribute SOFT_HLUTNM of \m_payload_i[31]_i_1\ : label is "soft_lutpair117";
   attribute SOFT_HLUTNM of \memory_reg[3][0]_srl4_i_1__0\ : label is "soft_lutpair115";
-  attribute SOFT_HLUTNM of \next_pending_r_i_4__0\ : label is "soft_lutpair115";
   attribute SOFT_HLUTNM of \wrap_boundary_axaddr_r[11]_i_1\ : label is "soft_lutpair117";
 begin
   Q(1 downto 0) <= \^q\(1 downto 0);
@@ -4323,6 +4319,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wrap_cmd is
     \wrap_cnt_r_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_19_b2s_wrap_cmd";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wrap_cmd;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wrap_cmd is
@@ -4373,8 +4371,8 @@ architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_wr
   signal \^wrap_next_pending\ : STD_LOGIC;
   signal \NLW_axaddr_wrap_reg[11]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \axlen_cnt[3]_i_3\ : label is "soft_lutpair127";
-  attribute SOFT_HLUTNM of \next_pending_r_i_2__2\ : label is "soft_lutpair127";
+  attribute SOFT_HLUTNM of \axlen_cnt[3]_i_3\ : label is "soft_lutpair121";
+  attribute SOFT_HLUTNM of \next_pending_r_i_2__2\ : label is "soft_lutpair121";
 begin
   Q(11 downto 0) <= \^q\(11 downto 0);
   \axlen_cnt_reg[0]_0\(0) <= \^axlen_cnt_reg[0]_0\(0);
@@ -5768,6 +5766,8 @@ entity zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice is
     \m_axi_araddr[11]_2\ : in STD_LOGIC;
     \m_payload_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice : entity is "axi_register_slice_v2_1_19_axic_register_slice";
 end zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axic_register_slice is
@@ -12180,6 +12180,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_b_channel is
     \in\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_b_channel : entity is "axi_protocol_converter_v2_1_19_b2s_b_channel";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_b_channel;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_b_channel is
@@ -12200,12 +12202,12 @@ architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_b_
   signal shandshake_r : STD_LOGIC;
   signal \^si_rs_bvalid\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \bresp_cnt[1]_i_1\ : label is "soft_lutpair133";
-  attribute SOFT_HLUTNM of \bresp_cnt[2]_i_1\ : label is "soft_lutpair133";
-  attribute SOFT_HLUTNM of \bresp_cnt[3]_i_1\ : label is "soft_lutpair132";
-  attribute SOFT_HLUTNM of \bresp_cnt[4]_i_1\ : label is "soft_lutpair132";
-  attribute SOFT_HLUTNM of \bresp_cnt[6]_i_1\ : label is "soft_lutpair134";
-  attribute SOFT_HLUTNM of \bresp_cnt[7]_i_2\ : label is "soft_lutpair134";
+  attribute SOFT_HLUTNM of \bresp_cnt[1]_i_1\ : label is "soft_lutpair127";
+  attribute SOFT_HLUTNM of \bresp_cnt[2]_i_1\ : label is "soft_lutpair127";
+  attribute SOFT_HLUTNM of \bresp_cnt[3]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \bresp_cnt[4]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \bresp_cnt[6]_i_1\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \bresp_cnt[7]_i_2\ : label is "soft_lutpair128";
 begin
   si_rs_bvalid <= \^si_rs_bvalid\;
 bid_fifo_0: entity work.zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_simple_fifo
@@ -12527,6 +12529,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_cmd_translator is
     \wrap_cnt_r_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_19_b2s_cmd_translator";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_cmd_translator;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_cmd_translator is
@@ -12867,6 +12871,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_r_channel is
     D : in STD_LOGIC_VECTOR ( 11 downto 0 );
     areset_d1 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_r_channel : entity is "axi_protocol_converter_v2_1_19_b2s_r_channel";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_r_channel;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_r_channel is
@@ -13110,6 +13116,8 @@ entity zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axi_register_slice is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axi_register_slice : entity is "axi_register_slice_v2_1_19_axi_register_slice";
 end zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axi_register_slice;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_register_slice_v2_1_19_axi_register_slice is
@@ -13279,6 +13287,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_ar_channel is
     \wrap_cnt_r_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_19_b2s_ar_channel";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_ar_channel;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_ar_channel is
@@ -13619,6 +13629,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_aw_channel is
     \wrap_cnt_r_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_19_b2s_aw_channel";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_aw_channel;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s_aw_channel is
@@ -13893,6 +13905,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s is
     s_axi_bready : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s : entity is "axi_protocol_converter_v2_1_19_b2s";
 end zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s;
 
 architecture STRUCTURE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_b2s is
@@ -14443,6 +14457,8 @@ entity zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_axi_protocol_converter is
   attribute C_TRANSLATION_MODE of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_19_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of zybo_7_auto_pc_0_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
@@ -14784,7 +14800,7 @@ architecture STRUCTURE of zybo_7_auto_pc_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN zybo_7_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN zybo_7_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
@@ -14794,7 +14810,7 @@ architecture STRUCTURE of zybo_7_auto_pc_0 is
   attribute X_INTERFACE_INFO of m_axi_bready : signal is "xilinx.com:interface:aximm:1.0 M_AXI BREADY";
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zybo_7_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zybo_7_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
   attribute X_INTERFACE_INFO of m_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI WVALID";
@@ -14806,7 +14822,7 @@ architecture STRUCTURE of zybo_7_auto_pc_0 is
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI RLAST";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI3, FREQ_HZ 50000000, ID_WIDTH 12, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN zybo_7_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI3, FREQ_HZ 200000000, ID_WIDTH 12, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN zybo_7_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";

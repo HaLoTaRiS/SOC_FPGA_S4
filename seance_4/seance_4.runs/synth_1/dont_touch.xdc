@@ -16,6 +16,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_7_ps7_0_ax
 # IP: bd/zybo_7/ip/zybo_7_rst_ps7_0_50M_0/zybo_7_rst_ps7_0_50M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_7_rst_ps7_0_50M_0 || ORIG_REF_NAME==zybo_7_rst_ps7_0_50M_0} -quiet] -quiet
 
+# IP: bd/zybo_7/ip/zybo_7_xbar_0/zybo_7_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_7_xbar_0 || ORIG_REF_NAME==zybo_7_xbar_0} -quiet] -quiet
+
+# IP: bd/zybo_7/ip/zybo_7_axi_timer_0_0/zybo_7_axi_timer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_7_axi_timer_0_0 || ORIG_REF_NAME==zybo_7_axi_timer_0_0} -quiet] -quiet
+
 # IP: bd/zybo_7/ip/zybo_7_auto_pc_0/zybo_7_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zybo_7_auto_pc_0 || ORIG_REF_NAME==zybo_7_auto_pc_0} -quiet] -quiet
 

@@ -12,11 +12,48 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
 #include "sleep.h"
 #include "time.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+#include "tp_seance_4.h"
+
+
+bool active_GetTime = false; // Flag
+
+// Fonction pour convertir en ns
+u32 calcul_ns (u32 nbr_cycle){
+	return nbr_cycle = nbr_cycle*5;
+}
+
+// Fonction pour convertir en us
+u32 calcul_us (u32 nbr_cycle){
+	return nbr_cycle = nbr_cycle*5/1000;
+}
+
+/*********** Lance et arret calcul ***********/
+void GetTime(void){
+	u32 timer_cycle = 0;
+
+	// Lancement du compteur
+	if (active_GetTime == false){
+		active_GetTime = true;
+		init_timer();
+	}
+
+	// fin du compteur & récupère la valeur
+	else {
+		timer_cycle = cycle_timer();
+		stop_timer();
+		xil_printf("Count timer : %u\r\n",timer_cycle);
+		xil_printf("Temps : %u ns | %u us \r\n",calcul_ns(timer_cycle),calcul_us(timer_cycle));
+		active_GetTime = false;
+	}
+}
 
 
 
@@ -32,8 +69,8 @@ int main()
 	srand(4);					// Paramètre pour avoir des valeurs aléatoires
 	volatile int *loc_addr = (int *) XPAR_MACC_IP_0_S00_AXI_BASEADDR; // voir Xparameter
 	uint16_t resultat_soft =0;			// Initialise une variable somme pour le soft
-	*(loc_addr+22) = 0;				// Initialise le registre controle de l'ip
-	int16_t resultat_hard = 0; 		// Initialise une variable somme pour le hard
+	*(loc_addr+21) = 0;				// Initialise le registre controle de l'ip
+	uint32_t resultat_hard = 0; 		// Initialise une variable somme pour le hard
 
 
 	/********** Question T9 ***********/
@@ -69,9 +106,11 @@ int main()
 		//		somme_soft = somme_soft +*(loc_addr+i);
 	}
 
-	// calcul soft du MACC_IP
-
+	xil_printf ("\r\n=====================\r\n");
 	xil_printf ("\r\nCalcul MACC_IP :\r\n");
+	xil_printf ("   - Software : \r\n");
+	GetTime(); // début comptage
+	// calcul soft du MACC_IP
 	for (uint8_t i=0; i<10; i++) {
 		int8_t table_1 = *(loc_addr+i);
 		for (uint8_t i=10; i<20; i++) {
@@ -79,9 +118,18 @@ int main()
 			resultat_soft = table_1*table_2 + resultat_soft;
 		}
 	}
-	xil_printf (" Résultat soft : %d\r\n",resultat_soft);
+	GetTime(); // fin du comptage
+	xil_printf ("Résultat : %d\r\n",resultat_soft);
 
+	// cacul hard du MACC_IP :
 
+	xil_printf ("\r\n   - HardWare : \r\n");
+	*(loc_addr+21) = 1;		// Force le calcul
+
+	usleep(8000);
+
+	resultat_hard = *(loc_addr+20); // On récupère la valeur l'adresse 20
+	xil_printf ("Résultat : %d \r\n", resultat_hard);
 
 	cleanup_platform();
 	return 0;
