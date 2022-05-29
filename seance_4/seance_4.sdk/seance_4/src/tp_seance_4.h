@@ -15,3 +15,4 @@ u32 calcul_ns (u32 nbr_cycle);
 u32 calcul_us (u32 nbr_cycle);
 
 void GetTime(void);
+

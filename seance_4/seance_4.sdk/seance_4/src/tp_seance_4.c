@@ -21,6 +21,7 @@
 #include "xscugic.h"
 #include "xil_exception.h"
 #include "tp_seance_4.h"
+#include "interrupt.h"
 
 
 bool active_GetTime = false; // Flag
@@ -55,7 +56,9 @@ void GetTime(void){
 	}
 }
 
-
+uint16_t resultat_soft =0;			// Initialise une variable somme pour le soft
+uint32_t resultat_hard = 0; 		// Initialise une variable somme pour le hard
+int *loc_addr = (int *) XPAR_MACC_IP_0_S00_AXI_BASEADDR; // voir Xparameter
 
 int main()
 {
@@ -67,11 +70,10 @@ int main()
 	xil_printf ("=================================\r\n\r\n");
 
 	srand(4);					// Paramètre pour avoir des valeurs aléatoires
-	volatile int *loc_addr = (int *) XPAR_MACC_IP_0_S00_AXI_BASEADDR; // voir Xparameter
-	uint16_t resultat_soft =0;			// Initialise une variable somme pour le soft
-	*(loc_addr+21) = 0;				// Initialise le registre controle de l'ip
-	uint32_t resultat_hard = 0; 		// Initialise une variable somme pour le hard
 
+	*(loc_addr+21) = 0;				// Initialise le registre controle de l'ip
+
+	SetupInterruptSystem();
 
 	/********** Question T9 ***********/
 	// Ecrire des valeurs aléatoire dans table 1
@@ -126,10 +128,10 @@ int main()
 	xil_printf ("\r\n   - HardWare : \r\n");
 	*(loc_addr+21) = 1;		// Force le calcul
 
-	usleep(8000);
+//	usleep(8000);
 
-	resultat_hard = *(loc_addr+20); // On récupère la valeur l'adresse 20
-	xil_printf ("Résultat : %d \r\n", resultat_hard);
+//	resultat_hard = *(loc_addr+20); // On récupère la valeur l'adresse 20
+//	xil_printf ("Résultat : %d \r\n", resultat_hard);
 
 	cleanup_platform();
 	return 0;
