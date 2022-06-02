@@ -73,7 +73,10 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.cache/wt [current_project]
   set_property parent.project_path C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.xpr [current_project]
-  set_property ip_repo_paths C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/ip_repo/macc_ip_1.0 [current_project]
+  set_property ip_repo_paths {
+  C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/ip_repo/macc_ip_1.0
+  C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/ip_repo/macc_ip_1.0
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

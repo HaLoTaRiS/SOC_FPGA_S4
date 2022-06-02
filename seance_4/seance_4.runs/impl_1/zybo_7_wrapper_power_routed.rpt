@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sat May 28 17:42:20 2022
+| Date             : Thu Jun  2 10:21:01 2022
 | Host             : Titania running 64-bit major release  (build 9200)
 | Command          : report_power -file zybo_7_wrapper_power_routed.rpt -pb zybo_7_wrapper_power_summary_routed.pb -rpx zybo_7_wrapper_power_routed.rpx
 | Design           : zybo_7_wrapper
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.011 |        3 |       --- |             --- |
-| Slice Logic             |     0.006 |     2908 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     1060 |     17600 |            6.02 |
+| Slice Logic             |     0.006 |     2982 |       --- |             --- |
+|   LUT as Logic          |     0.005 |     1092 |     17600 |            6.20 |
 |   CARRY4                |    <0.001 |       97 |      4400 |            2.20 |
-|   Register              |    <0.001 |     1225 |     35200 |            3.48 |
+|   Register              |    <0.001 |     1241 |     35200 |            3.53 |
 |   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
-|   Others                |     0.000 |      247 |       --- |             --- |
-| Signals                 |     0.008 |     2144 |       --- |             --- |
+|   Others                |     0.000 |      250 |       --- |             --- |
+| Signals                 |     0.008 |     2204 |       --- |             --- |
 | PS7                     |     1.402 |        1 |       --- |             --- |
 | Static Power            |     0.117 |          |           |                 |
 | Total                   |     1.544 |          |           |                 |
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.025 |      0.007 |
+| Vccint    |       1.000 |     0.031 |       0.024 |      0.007 |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -148,8 +148,8 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| zybo_7_wrapper           |     1.427 |
-|   zybo_7_i               |     1.427 |
+| zybo_7_wrapper           |     1.426 |
+|   zybo_7_i               |     1.426 |
 |     axi_timer_0          |     0.007 |
 |       U0                 |     0.007 |
 |     macc_ip_0            |     0.006 |

@@ -1,6 +1,206 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jun  2 09:54:11 2022
+| Host         : Titania running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_7_macc_ip_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of zybo_7_macc_ip_0_0 (xilinx.com:user:macc_ip:1.0) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jun  2 08:22:35 2022
+| Host         : Titania running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_7_macc_ip_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of zybo_7_macc_ip_0_0 (xilinx.com:user:macc_ip:1.0 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jun  2 08:20:27 2022
+| Host         : Titania running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zybo_7_macc_ip_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of zybo_7_macc_ip_0_0 (xilinx.com:user:macc_ip:1.0) from (Rev. 6) to (Rev. 1)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'zybo_7_macc_ip_0_0'.
+
+
+-Upgrade has removed interface 'Out_interrupt'
+
+-Upgrade has added interface 'IRQ' (xilinx.com:signal:interrupt:1.0)
+
+-Upgrade has added interface 'S_AXI_INTR' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'S_AXI_INTR_CLK' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 'S_AXI_INTR_RST' (xilinx.com:signal:reset:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'zybo_7_macc_ip_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'Out_interrupt'
+
+-Upgrade has added port 'irq'
+
+-Upgrade has added port 's_axi_intr_aclk'
+
+-Upgrade has added port 's_axi_intr_araddr'
+
+-Upgrade has added port 's_axi_intr_aresetn'
+
+-Upgrade has added port 's_axi_intr_arprot'
+
+-Upgrade has added port 's_axi_intr_arready'
+
+-Upgrade has added port 's_axi_intr_arvalid'
+
+-Upgrade has added port 's_axi_intr_awaddr'
+
+-Upgrade has added port 's_axi_intr_awprot'
+
+-Upgrade has added port 's_axi_intr_awready'
+
+-Upgrade has added port 's_axi_intr_awvalid'
+
+-Upgrade has added port 's_axi_intr_bready'
+
+-Upgrade has added port 's_axi_intr_bresp'
+
+-Upgrade has added port 's_axi_intr_bvalid'
+
+-Upgrade has added port 's_axi_intr_rdata'
+
+-Upgrade has added port 's_axi_intr_rready'
+
+-Upgrade has added port 's_axi_intr_rresp'
+
+-Upgrade has added port 's_axi_intr_rvalid'
+
+-Upgrade has added port 's_axi_intr_wdata'
+
+-Upgrade has added port 's_axi_intr_wready'
+
+-Upgrade has added port 's_axi_intr_wstrb'
+
+-Upgrade has added port 's_axi_intr_wvalid'
+
+
+4. Customization warnings
+-------------------------
+
+Parameter 'NWORDS' is no longer present on the upgraded IP 'zybo_7_macc_ip_0_0', and cannot be set to '10'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:macc_ip:1.0 -user_name zybo_7_macc_ip_0_0
+set_property -dict "\
+  CONFIG.C_S00_AXI_ADDR_WIDTH {7} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {zybo_7_macc_ip_0_0} \
+  CONFIG.S00_AXI.ADDR_WIDTH {7} \
+  CONFIG.S00_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S00_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S00_AXI.BUSER_WIDTH {0} \
+  CONFIG.S00_AXI.CLK_DOMAIN {zybo_7_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.S00_AXI.DATA_WIDTH {32} \
+  CONFIG.S00_AXI.FREQ_HZ {200000000} \
+  CONFIG.S00_AXI.HAS_BRESP {1} \
+  CONFIG.S00_AXI.HAS_BURST {0} \
+  CONFIG.S00_AXI.HAS_CACHE {0} \
+  CONFIG.S00_AXI.HAS_LOCK {0} \
+  CONFIG.S00_AXI.HAS_PROT {1} \
+  CONFIG.S00_AXI.HAS_QOS {0} \
+  CONFIG.S00_AXI.HAS_REGION {0} \
+  CONFIG.S00_AXI.HAS_RRESP {1} \
+  CONFIG.S00_AXI.HAS_WSTRB {1} \
+  CONFIG.S00_AXI.ID_WIDTH {0} \
+  CONFIG.S00_AXI.INSERT_VIP {0} \
+  CONFIG.S00_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S00_AXI.NUM_READ_OUTSTANDING {2} \
+  CONFIG.S00_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S00_AXI.NUM_WRITE_OUTSTANDING {2} \
+  CONFIG.S00_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S00_AXI.PHASE {0.000} \
+  CONFIG.S00_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S00_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S00_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.RUSER_WIDTH {0} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {30} \
+  CONFIG.S00_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.WUSER_WIDTH {0} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_CLK.CLK_DOMAIN {zybo_7_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.S00_AXI_CLK.FREQ_HZ {200000000} \
+  CONFIG.S00_AXI_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXI_CLK.PHASE {0.000} \
+  CONFIG.S00_AXI_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} " [get_ips zybo_7_macc_ip_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Sat May 28 17:32:41 2022
 | Host         : Titania running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

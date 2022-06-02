@@ -22,6 +22,19 @@ proc create_ipi_design { offsetfile design_name } {
 	# Create port connections
 	connect_bd_net -net aclk_net [get_bd_ports ACLK] [get_bd_pins master_0/ACLK] [get_bd_pins macc_ip_0/S00_AXI_ACLK]
 	connect_bd_net -net aresetn_net [get_bd_ports ARESETN] [get_bd_pins master_0/ARESETN] [get_bd_pins macc_ip_0/S00_AXI_ARESETN]
+
+	# Create instance: master_1, and set properties
+	set master_1 [ create_bd_cell -type ip -vlnv  xilinx.com:ip:axi_vip master_1]
+	set_property -dict [ list CONFIG.PROTOCOL {AXI4LITE} CONFIG.INTERFACE_MODE {MASTER} ] $master_1
+
+	# Create interface connections
+	connect_bd_intf_net [get_bd_intf_pins master_1/M_AXI ] [get_bd_intf_pins macc_ip_0/S_AXI_INTR]
+
+	# Create port connections
+	connect_bd_net -net aclk_net [get_bd_ports ACLK] [get_bd_pins master_1/ACLK] [get_bd_pins macc_ip_0/S_AXI_INTR_ACLK]
+	connect_bd_net -net aresetn_net [get_bd_ports ARESETN] [get_bd_pins master_1/ARESETN] [get_bd_pins macc_ip_0/S_AXI_INTR_ARESETN]
+	set S_AXI_INTR_IRQ [ create_bd_port -dir O -type intr irq ]
+	connect_bd_net [get_bd_pins /macc_ip_0/irq] ${S_AXI_INTR_IRQ}
 set_property target_simulator XSim [current_project]
 set_property -name {xsim.simulate.runtime} -value {100ms} -objects [get_filesets sim_1]
 
@@ -41,6 +54,17 @@ set_property -name {xsim.simulate.runtime} -value {100ms} -objects [get_filesets
 	puts $fp "`define BD_WRAPPER ${design_name}_wrapper\n"
 	puts $fp "//Configuration address parameters"
 
+	puts $fp "\n//Interrupt configuration parameters"
+
+	set param_irq_active_state [get_property CONFIG.C_IRQ_ACTIVE_STATE [get_bd_cells macc_ip_0]]
+	set param_irq_sensitivity [get_property CONFIG.C_IRQ_SENSITIVITY [get_bd_cells macc_ip_0]]
+	set param_intr_active_state [get_property CONFIG.C_INTR_ACTIVE_STATE [get_bd_cells macc_ip_0]]
+	set param_intr_sensitivity [get_property CONFIG.C_INTR_SENSITIVITY [get_bd_cells macc_ip_0]]
+
+	puts $fp "`define IRQ_ACTIVE_STATE ${param_irq_active_state}"
+	puts $fp "`define IRQ_SENSITIVITY ${param_irq_sensitivity}"
+	puts $fp "`define INTR_ACTIVE_STATE ${param_intr_active_state}"
+	puts $fp "`define INTR_SENSITIVITY ${param_intr_sensitivity}\n"
 	puts $fp "`endif"
 	close $fp
 }

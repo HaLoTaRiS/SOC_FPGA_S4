@@ -276,12 +276,12 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_MACC_IP_0_OUT_INTERRUPT_INTR 61U
+#define XPAR_FABRIC_MACC_IP_0_IRQ_INTR 61U
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_MACC_IP_0_VEC_ID XPAR_FABRIC_MACC_IP_0_OUT_INTERRUPT_INTR
+#define XPAR_FABRIC_MACC_IP_0_VEC_ID XPAR_FABRIC_MACC_IP_0_IRQ_INTR
 
 /******************************************************************/
 

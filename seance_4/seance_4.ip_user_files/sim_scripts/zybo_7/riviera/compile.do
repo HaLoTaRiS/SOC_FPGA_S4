@@ -39,8 +39,9 @@ vcom -work xpm -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/zybo_7/ip/zybo_7_processing_system7_0_0/zybo_7_processing_system7_0_0_sim_netlist.vhdl" \
-"../../../bd/zybo_7/ipshared/a30f/hdl/macc_ip_v1_0_S00_AXI.vhd" \
-"../../../bd/zybo_7/ipshared/a30f/hdl/macc_ip_v1_0.vhd" \
+"../../../bd/zybo_7/ipshared/9391/hdl/macc_ip_v1_0_S00_AXI.vhd" \
+"../../../bd/zybo_7/ipshared/9391/hdl/macc_ip_v1_0_S_AXI_INTR.vhd" \
+"../../../bd/zybo_7/ipshared/9391/hdl/macc_ip_v1_0.vhd" \
 "../../../bd/zybo_7/ip/zybo_7_macc_ip_0_0/sim/zybo_7_macc_ip_0_0.vhd" \
 
 vcom -work lib_cdc_v1_0_2 -93 \
@@ -51,7 +52,7 @@ vcom -work proc_sys_reset_v5_0_13 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/zybo_7/ip/zybo_7_rst_ps7_0_50M_0/sim/zybo_7_rst_ps7_0_50M_0.vhd" \
-"c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.srcs/sources_1/bd/zybo_7/ip/zybo_7_xbar_0/zybo_7_xbar_0_sim_netlist.vhdl" \
+"../../../bd/zybo_7/ip/zybo_7_xbar_0/zybo_7_xbar_0_sim_netlist.vhdl" \
 
 vcom -work axi_lite_ipif_v3_0_4 -93 \
 "../../../../seance_4.srcs/sources_1/bd/zybo_7/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \

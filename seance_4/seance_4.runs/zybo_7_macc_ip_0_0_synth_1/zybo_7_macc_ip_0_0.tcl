@@ -32,7 +32,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/Baptiste/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
-set_property ip_repo_paths c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/ip_repo/macc_ip_1.0 [current_project]
+set_property ip_repo_paths {
+  c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/ip_repo/macc_ip_1.0
+  c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/ip_repo/macc_ip_1.0
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/Baptiste/Documents/ENSEA/3D/S10_007_Soc/003_TP2/Zybo-soc-dossier6/seance_4/seance_4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
