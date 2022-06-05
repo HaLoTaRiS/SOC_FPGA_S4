@@ -12,13 +12,18 @@ src/tp_seance_4.o src/tp_seance_4.o: ../src/tp_seance_4.c \
  ../../seance_4_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
  ../../seance_4_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
  ../../seance_4_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
- ../../seance_4_bsp/ps7_cortexa9_0/include/xscugic.h \
- ../../seance_4_bsp/ps7_cortexa9_0/include/xstatus.h \
+ ../src/timer.h ../../seance_4_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../seance_4_bsp/ps7_cortexa9_0/include/xil_assert.h \
+ ../../seance_4_bsp/ps7_cortexa9_0/include/xtmrctr.h \
+ ../../seance_4_bsp/ps7_cortexa9_0/include/xstatus.h \
+ ../../seance_4_bsp/ps7_cortexa9_0/include/xtmrctr_l.h \
+ ../../seance_4_bsp/ps7_cortexa9_0/include/xil_exception.h \
+ ../../seance_4_bsp/ps7_cortexa9_0/include/xscugic.h \
  ../../seance_4_bsp/ps7_cortexa9_0/include/xscugic_hw.h \
  ../../seance_4_bsp/ps7_cortexa9_0/include/xil_exception.h \
- ../../seance_4_bsp/ps7_cortexa9_0/include/xil_exception.h \
- ../src/tp_seance_4.h ../src/interrupt.h
+ ../src/tp_seance_4.h ../src/interrupt.h ../src/MaccDriver.h \
+ ../../seance_4_bsp/ps7_cortexa9_0/include/xil_types.h \
+ ../../seance_4_bsp/ps7_cortexa9_0/include/xil_io.h
 
 ../src/platform.h:
 
@@ -48,18 +53,32 @@ src/tp_seance_4.o src/tp_seance_4.o: ../src/tp_seance_4.c \
 
 ../../seance_4_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:
 
-../../seance_4_bsp/ps7_cortexa9_0/include/xscugic.h:
+../src/timer.h:
 
 ../../seance_4_bsp/ps7_cortexa9_0/include/xstatus.h:
 
 ../../seance_4_bsp/ps7_cortexa9_0/include/xil_assert.h:
 
-../../seance_4_bsp/ps7_cortexa9_0/include/xscugic_hw.h:
+../../seance_4_bsp/ps7_cortexa9_0/include/xtmrctr.h:
+
+../../seance_4_bsp/ps7_cortexa9_0/include/xstatus.h:
+
+../../seance_4_bsp/ps7_cortexa9_0/include/xtmrctr_l.h:
 
 ../../seance_4_bsp/ps7_cortexa9_0/include/xil_exception.h:
+
+../../seance_4_bsp/ps7_cortexa9_0/include/xscugic.h:
+
+../../seance_4_bsp/ps7_cortexa9_0/include/xscugic_hw.h:
 
 ../../seance_4_bsp/ps7_cortexa9_0/include/xil_exception.h:
 
 ../src/tp_seance_4.h:
 
 ../src/interrupt.h:
+
+../src/MaccDriver.h:
+
+../../seance_4_bsp/ps7_cortexa9_0/include/xil_types.h:
+
+../../seance_4_bsp/ps7_cortexa9_0/include/xil_io.h:

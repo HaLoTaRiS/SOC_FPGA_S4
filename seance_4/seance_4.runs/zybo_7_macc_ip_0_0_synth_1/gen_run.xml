@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="zybo_7_macc_ip_0_0_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1654156518">
+<GenRun Id="zybo_7_macc_ip_0_0_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1654459856">
   <File Type="PA-TCL" Name="zybo_7_macc_ip_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="zybo_7_macc_ip_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="zybo_7_macc_ip_0_0_reports.tcl"/>

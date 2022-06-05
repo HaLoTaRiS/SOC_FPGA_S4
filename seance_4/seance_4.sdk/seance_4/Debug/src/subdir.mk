@@ -7,18 +7,21 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
+../src/MaccDriver.c \
 ../src/interrupt.c \
 ../src/platform.c \
 ../src/timer.c \
 ../src/tp_seance_4.c 
 
 OBJS += \
+./src/MaccDriver.o \
 ./src/interrupt.o \
 ./src/platform.o \
 ./src/timer.o \
 ./src/tp_seance_4.o 
 
 C_DEPS += \
+./src/MaccDriver.d \
 ./src/interrupt.d \
 ./src/platform.d \
 ./src/timer.d \

@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+#include "xscugic.h"
+#include "interrupt.h"
+#include "tp_seance_4.h"
+#include "macc_ip.h"
+#include "xscugic_hw.h"
+
+#define INTC_DEVICE_ID	XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define INTC_MACC_IP	XPAR_FABRIC_MACC_IP_0_OUT_INTERRUPT_INTR
+
+#define INTC_INTERRUPT_ID  XPAR_FABRIC_MACC_IP_0_IRQ_INTR  // IRQ [0]
+
+
+
+/* pour le calcul, déclaration dans le main */
+extern uint16_t resultat_hard;
+extern int *loc_addr;
+
+
+XScuGic intc_instance_ptr;
+
+XScuGic_Config *IntcConfig;
+
+// routine d'interruption
+void isr0 (void *intc_inst_ptr) {
+
+	GetTime(); // fin du comptage
+	resultat_hard = *(loc_addr+20); // On récupère la valeur l'adresse 20
+	xil_printf ("Résultat FIN : %d \r\n", resultat_hard);
+
+	XScuGic_Disable(&intc_instance_ptr, INTC_INTERRUPT_ID);
+	XScuGic_WriteReg(&intc_instance_ptr, 12, 1);
+	*(loc_addr+21) = 0;		// Repasse a l'état repos
+	XScuGic_Enable(&intc_instance_ptr, INTC_INTERRUPT_ID);
+}
+
+int SetupInterruptSystem()  {
+   int result;
+
+
+   IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+   if (IntcConfig == NULL)    {
+       return XST_FAILURE;
+   }
+   result = XScuGic_CfgInitialize(&intc_instance_ptr, IntcConfig,    IntcConfig->CpuBaseAddress);
+   if (result != XST_SUCCESS)    {
+       return XST_FAILURE;
+   }
+
+   // Priorité
+   XScuGic_SetPriorityTriggerType(&intc_instance_ptr, INTC_INTERRUPT_ID, 0xA0, 0x3);
+
+   /* Connect the interrupt handler */
+   result = XScuGic_Connect(&intc_instance_ptr, INTC_INTERRUPT_ID, (Xil_ExceptionHandler) isr0, (void *)&intc);
+   if (result != XST_SUCCESS)    {
+       return result;
+   }
+   /* Enable the interrupt for the controller device. */
+   XScuGic_Enable(&intc_instance_ptr, INTC_INTERRUPT_ID);
+
+   Xil_ExceptionInit();
+   Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+       (Xil_ExceptionHandler)XScuGic_InterruptHandler, &intc_instance_ptr);
+
+   Xil_ExceptionEnable();    /* Enable non-critical exceptions */
+   return XST_SUCCESS;
+}
+
+
+

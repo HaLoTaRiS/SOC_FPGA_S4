@@ -17,11 +17,13 @@
 #include "xil_printf.h"
 #include "xparameters.h"
 #include "sleep.h"
-#include "time.h"
+#include "timer.h"
 #include "xscugic.h"
 #include "xil_exception.h"
 #include "tp_seance_4.h"
 #include "interrupt.h"
+#include "MaccDriver.h"
+
 
 
 bool active_GetTime = false; // Flag
@@ -56,9 +58,14 @@ void GetTime(void){
 	}
 }
 
-uint16_t resultat_soft =0;			// Initialise une variable somme pour le soft
-uint32_t resultat_hard = 0; 		// Initialise une variable somme pour le hard
-int *loc_addr = (int *) XPAR_MACC_IP_0_S00_AXI_BASEADDR; // voir Xparameter
+int32_t resultat_soft =0;		// Initialise une variable somme pour le soft
+int32_t resultat_hard = 0; 		// Initialise une variable somme pour le hard
+volatile int *loc_addr = (int *) XPAR_MACC_IP_0_S00_AXI_BASEADDR; // voir Xparameter
+//volatile int *addr_table1 = *loc_addr;
+//volatile int *addr_table2 = *loc_addr+10;
+//volatile int *addr_resultat = *loc_addr+20;
+//volatile int *addr_control = *loc_addr +21;
+
 
 int main()
 {
@@ -69,7 +76,7 @@ int main()
 	xil_printf ("Baptiste FRITOT - Jeremy VICENTE\r\n");
 	xil_printf ("=================================\r\n\r\n");
 
-	srand(4);					// Paramètre pour avoir des valeurs aléatoires
+	srand(2);					// Paramètre pour avoir des valeurs aléatoires
 
 	*(loc_addr+21) = 0;				// Initialise le registre controle de l'ip
 
@@ -80,14 +87,14 @@ int main()
 	xil_printf ("Ecriture sur Table_1[] :\r\n");
 
 	for (uint8_t i = 0; i<10; i++) {
-		int8_t val	= (rand()%20)-10;
+		int8_t val	= (rand()%25)-10;
 		*(loc_addr+i) = val;
 		xil_printf ("   - Table_1[%d]  = %d\r\n", i, val);
 	}
 	// Ecrire des valeurs aléatoire dans table 2
-	xil_printf ("\r\nEcriture sur Table_1[] :\r\n");
+	xil_printf ("\r\nEcriture sur Table_2[] :\r\n");
 	for (uint8_t i = 10; i<20; i++) {
-		int8_t val	= (rand()%20)-5;
+		int8_t val	= (rand()%25)-10;
 		*(loc_addr+i) = val;
 		xil_printf ("   - Table_2[%d]  = %d\r\n", i, val);
 	}
@@ -115,9 +122,10 @@ int main()
 	// calcul soft du MACC_IP
 	for (uint8_t i=0; i<10; i++) {
 		int8_t table_1 = *(loc_addr+i);
-		for (uint8_t i=10; i<20; i++) {
-			int8_t table_2 = *(loc_addr+i);
+		for (uint8_t j=10; j<20; j++) {
+			int8_t table_2 = *(loc_addr+j);
 			resultat_soft = table_1*table_2 + resultat_soft;
+//			xil_printf ("[%d] x [%d] = resul : %d\r\n", i, j-10, resultat_soft);
 		}
 	}
 	GetTime(); // fin du comptage
@@ -125,13 +133,19 @@ int main()
 
 	// cacul hard du MACC_IP :
 
-	xil_printf ("\r\n   - HardWare : \r\n");
-	*(loc_addr+21) = 1;		// Force le calcul
+	xil_printf ("\r\n   - HardWare : via interruption \r\n");
+	GetTime();
+	*(loc_addr+21) = 1;		    // Lance le calcul
 
+
+//	Test de calcul sans interruption :
 //	usleep(8000);
-
+//
 //	resultat_hard = *(loc_addr+20); // On récupère la valeur l'adresse 20
 //	xil_printf ("Résultat : %d \r\n", resultat_hard);
+//	*(loc_addr+21) = 0;		// Force le calcul
+
+	while (1);
 
 	cleanup_platform();
 	return 0;

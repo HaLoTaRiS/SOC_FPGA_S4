@@ -44,13 +44,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="7"/>
-    <Option Name="WTModelSimExportSim" Val="7"/>
-    <Option Name="WTQuestaExportSim" Val="7"/>
-    <Option Name="WTIesExportSim" Val="7"/>
-    <Option Name="WTVcsExportSim" Val="7"/>
-    <Option Name="WTRivieraExportSim" Val="7"/>
-    <Option Name="WTActivehdlExportSim" Val="7"/>
+    <Option Name="WTXSimExportSim" Val="32"/>
+    <Option Name="WTModelSimExportSim" Val="32"/>
+    <Option Name="WTQuestaExportSim" Val="32"/>
+    <Option Name="WTIesExportSim" Val="32"/>
+    <Option Name="WTVcsExportSim" Val="32"/>
+    <Option Name="WTRivieraExportSim" Val="32"/>
+    <Option Name="WTActivehdlExportSim" Val="32"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -71,20 +71,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_rst_ps7_0_50M_0/zybo_7_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="zybo_7_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_macc_ip_0_0/zybo_7_macc_ip_0_0.xci">
-          <Proxy FileSetName="zybo_7_macc_ip_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_processing_system7_0_0/zybo_7_processing_system7_0_0.xci">
-          <Proxy FileSetName="zybo_7_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_xbar_0/zybo_7_xbar_0.xci">
+          <Proxy FileSetName="zybo_7_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_axi_timer_0_0/zybo_7_axi_timer_0_0.xci">
           <Proxy FileSetName="zybo_7_axi_timer_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_xbar_0/zybo_7_xbar_0.xci">
-          <Proxy FileSetName="zybo_7_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_processing_system7_0_0/zybo_7_processing_system7_0_0.xci">
+          <Proxy FileSetName="zybo_7_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_macc_ip_0_0/zybo_7_macc_ip_0_0.xci">
+          <Proxy FileSetName="zybo_7_macc_ip_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zybo_7.bd" FileRelPathName="ip/zybo_7_rst_ps7_0_50M_0/zybo_7_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="zybo_7_rst_ps7_0_50M_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/zybo_7/hdl/zybo_7_wrapper.vhd">

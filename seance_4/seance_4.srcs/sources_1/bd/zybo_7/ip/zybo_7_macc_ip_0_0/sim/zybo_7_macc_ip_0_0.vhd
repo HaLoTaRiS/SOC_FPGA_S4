@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:macc_ip:1.0
--- IP Revision: 2
+-- IP Revision: 27
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
